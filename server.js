@@ -37,6 +37,11 @@ app.get('/products', async (req, res) => {
     );
 }); 
 
+// NEW 
+app.get('/products/new', (req, res) => {
+	res.send('new');
+});
+
 // C is for CREATE
 app.post('/products', (req,res) => {
     if (req.body.completed === 'on') {
@@ -48,7 +53,6 @@ app.post('/products', (req,res) => {
     }
     const createdProduct = new Product(req.body)
     createdProduct.save().then(res.redirect('/products'))
-    
 })
 
 
