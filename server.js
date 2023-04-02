@@ -6,7 +6,6 @@ const app = express();
 require('dotenv').config();
 
 mongoose.connect(process.env.DATABASE_URL);
-
 // Database Connection Error/Success
 // Define callback functions for various events
 const db = mongoose.connection
