@@ -19,6 +19,8 @@ db.on('disconnected', () => console.log('mongo disconnected'));
 // Body parser middleware: give us access to req.body
 app.use(express.urlencoded({ extended: false }));
 
+
+
 app.get('/products/new', (req, res) => {
     res.render('new.ejs')
 })
