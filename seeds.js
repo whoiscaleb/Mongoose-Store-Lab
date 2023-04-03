@@ -8,7 +8,8 @@ const seedProducts = [
       img: 'https://unsplash.com/photos/BjhKc5QBzlg',
       price: $190,
       qty: 82
-    }, {
+    }, 
+    {
       name: 'Air Force One Low 07',
       description: "The Nike Air Force 1 Low White 2007 features an all-white leather upper with a perforated toe box and Swoosh overlays. A Nike heel embroidery and white sole completes the design.",
       img: 'https://m.media-amazon.com/images/I/81uiWMk9dnL._AC_UL1500_.jpg',
@@ -24,7 +25,7 @@ const seedProducts = [
         name: 'Nike Air Max 1 OG 86',
         description: 'The Air Max 1 ‘86 Big Bubble released as Nikes premier Air Max Day release in 2023. The sneakers are constructed using grey nubuck, white mesh and red suede across the uppers and a large air unit on the midsole. Nike used Sport Red branding on the tongue and heel of the sneaker.',
         img: 'https://media.endclothing.com/end-features/f_auto,q_auto:eco,w_1520/prodfeatures/df24a3c2-2246-452e-9b64-2bf9a8457f28_DQ3989-100_launches_hero_landscape_1.png?auto=compress,format',
-        price: $150,
+        price: 150,
         qty: 110
       }, {
         name: 'New Balance 550',

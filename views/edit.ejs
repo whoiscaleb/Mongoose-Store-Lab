@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/public/style.css">
+    <title>Catch Em All!</title>
+  </head>
+    <body>
+      <h1><%= seedProducts.name %></h1>
+      <img src='<%= seedProducts.img %>'></img>
+      <form>
+          Name: <input type="text" id="name" name="name" value="<%= seedProducts.name %>"/></br>
+          Description: <input type="text" id="name" name="descrip" value="<%= seedProducts.description %>"/></br>
+          Img: <input type="text" id="name" name="img" value="<%= seedProducts.img %>"/></br>
+          Price: <input type="text" id="name" name="price" value="<%= seedProducts.price %>"/></br>
+          Qty: <input type="text" id="name" name="" value="<%= seedProducts.qty %>"/></br>
+          <button type="submit">Submit</button>
+      </form>
+      <a href="/products">Home!</a>
+  </body>
+</html>

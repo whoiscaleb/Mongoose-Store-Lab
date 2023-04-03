@@ -31,14 +31,30 @@ app.get('/products/new', (req, res) => {
 app.get('/products', async (req, res) => {
     const allProducts = await Product.find({})
     res.render('index.ejs', {
-        product: allProducts
+        Product: allProducts
     }
     );
 }); 
 
-// NEW 
+// N is for NEW
 app.get('/products/new', (req, res) => {
 	res.send('new');
+});
+
+// D is for DELETE
+app.delete('/products/:id', async(req, res) => {
+    await Product.findbByIdAndDelete(req.params.id);
+    res.redirect('/product');
+});
+
+// U is for UPDATE
+app.put('/product/:id', async (req, res) => {
+    await Product.findByAndUpdate(
+        req.params.id,
+        req.body,
+        { new: true }
+    );
+    res.redirect('/product');
 });
 
 // C is for CREATE
@@ -54,14 +70,16 @@ app.post('/products', (req,res) => {
     createdProduct.save().then(res.redirect('/products'))
 })
 
-
-// Show
-app.get('/products/:id', async (req, res) => {
-    const foundProducts= await Product.findById(req.params.id).exec()
-    res.render('show.ejs', {
-        product: foundProduct,
-    });
-}); 
+// E is for EDIT
+app.get ('product/:id/edit', async (req,res) => {
+    const foundProduct= await Product.findById (reg.params.id).exec();
+    res.render('edit.ejs', {Product: seedProduct });
+})
+// S is for SHOW
+app.get('/products/:id', async(req, res) => {
+    let i = req.params.id
+    let foundProducts = await Product.find({})
+    res.render("show.ejs", {product: foundProducts[i]});
 
 // Listener
 const PORT = process.env.PORT;
