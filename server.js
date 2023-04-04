@@ -61,13 +61,13 @@ app.get('/products/:id', async(req, res) => {
 
 
 // U is for UPDATE
-app.put('/product/:id', async (req, res) => {
-    await product.findByAndUpdate(
+app.put('/products/:id', async (req, res) => {
+    await product.findByIdAndUpdate(
         req.params.id,
         req.body,
         { new: true }
     );
-    res.redirect('/products/${req.params.id}');
+    res.redirect('/products/'+req.params.id);
 });
 
 
