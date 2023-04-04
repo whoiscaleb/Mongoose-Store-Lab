@@ -5,17 +5,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/public/style.css">
-  <title>Store</title>
+  <title>Kickify</title>
 </head>
 <body>
   <h1>Kickify</h1>
   <a href="/products/new" id="create">Click here to create a new product</a>
   <!-- <img src="" alt=""> -->
   <ul>
-    <% for (let i = 0; i < Product.length; i++ ) { %>
+    <% for (let i = 0; i < product.length; i++ ) { %>
       <li id="items">      
-        <a href="/products/<%= i %>"><%=Product[i].name %></a>
-        <img src="<%= Product[i].img %>" alt="<%= Product[i].name%>">
+        <a href="/products/<%= product[i]._id %>"><%=product[i].name %></a>
+        <img src="<%= product[i].img %>" alt="<%= product[i].name%>">
         </li>
   <% } %>
       </ul>
